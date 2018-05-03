@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TestSuperDeal</string>
+    <string name="github_watcher">GitHub Watcher</string>
+    <string name="location">Location</string>
+    <string name="blog">blog</string>
+    <string name="github_repository">Search GitHub Organization</string>
+    <string name="error">error</string>
+
+    <string name="title">%1$s Repositories (%2$s)</string>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.vadym.testsuperdeal.activities.MainActivity">
+
+    <data>
+        <import type="android.view.View" alias="v"/>
+        <variable
+            name="error"
+            type="com.example.vadym.testsuperdeal.util.GitHubError"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="65dp"
+            android:text="@string/github_watcher"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@id/title"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:hint="@string/github_repository" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText"
+            android:layout_marginTop="5dp" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/errorCardView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/editText"
+            android:visibility="@{error.isError ? v.VISIBLE : v.GONE}"
+            tools:visibility="gone">
+            <TextView
+                android:id="@+id/errorText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                tools:text="@string/error"
+                android:text="@{error.errorText}"
+                android:textColor="#24292e"
+                android:textSize="22sp" />
+        </android.support.v7.widget.CardView>
+
+
+
+    </RelativeLayout>
+</layout>
