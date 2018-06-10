@@ -14,11 +14,14 @@ import com.example.vadym.testsuperdeal.util.OnRepositoryClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 public class GitHubAdapter extends RecyclerView.Adapter<GitHubViewHolder> {
 
     private List<GitHubInfo> list = new ArrayList<>();
     private OnRepositoryClickListener listener;
 
+    @Inject
     public GitHubAdapter() {
     }
 

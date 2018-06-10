@@ -12,11 +12,11 @@ import io.reactivex.Completable;
 import io.reactivex.Flowable;
 import io.reactivex.schedulers.Schedulers;
 
-public class GitHubListModel extends AndroidViewModel {
+public class DBViewModel extends AndroidViewModel {
 
     private GitHubDB db;
 
-    public GitHubListModel(@NonNull Application application) {
+    public DBViewModel(@NonNull Application application) {
         super(application);
 
         db = GitHubDB.getInstance(getApplication());

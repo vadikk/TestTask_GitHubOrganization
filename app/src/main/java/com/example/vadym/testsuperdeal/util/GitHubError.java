@@ -6,6 +6,8 @@ import android.databinding.ObservableBoolean;
 
 import com.android.databinding.library.baseAdapters.BR;
 
+import javax.inject.Inject;
+
 public class GitHubError extends BaseObservable {
 
     private String errorText;
@@ -16,6 +18,7 @@ public class GitHubError extends BaseObservable {
     public final ObservableBoolean isLoading = new ObservableBoolean(false);
 
 
+    @Inject
     public GitHubError() {
     }
 

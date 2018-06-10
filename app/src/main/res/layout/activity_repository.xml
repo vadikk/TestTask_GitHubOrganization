@@ -9,6 +9,9 @@
         <variable
             name="error"
             type="com.example.vadym.testsuperdeal.util.GitHubError"/>
+        <variable
+            name="viewModel"
+            type="com.example.vadym.testsuperdeal.mvvm.GitHubViewModel"/>
     </data>
 
     <RelativeLayout
@@ -18,7 +21,10 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            app:items="@{viewModel.adapterRepository}"
+            app:manager="@{viewModel.manager}"
+            app:addScrollListener="@{viewModel.scrollListener}"/>
 
         <android.support.v7.widget.CardView
             android:id="@+id/errorCardView"

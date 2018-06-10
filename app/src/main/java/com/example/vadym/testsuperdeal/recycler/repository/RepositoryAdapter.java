@@ -17,11 +17,14 @@ import com.example.vadym.testsuperdeal.model.GitHubRepository;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 public class RepositoryAdapter extends RecyclerView.Adapter<RepositoryViewHolder> {
 
     private List<GitHubRepository> list = new ArrayList<>();
     private Context context;
 
+    @Inject
     public RepositoryAdapter(Context context) {
         this.context = context;
     }
